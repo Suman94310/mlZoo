@@ -1,0 +1,50 @@
+@font-face{
+    font-family: 'Varela Round';
+    src: url("../../fonts/VarelaRound-Regular.ttf");
+}
+
+nav{
+    background-color: #24252a;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.brand-logo{
+    font-size: 4vh;
+}
+
+.nav-wrapper{
+    display: flex;
+    height: 7vh;
+    background-color: #24252a;
+    align-items: center;
+    color: #edf0f1;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.nav-links{
+    display: flex;
+    height: 7vh;
+    align-items: center;
+    margin-left: 3vw;
+}
+
+.nav-links a li{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.nav-wrapper a{
+    height: 100%;
+    align-items: center;
+    color: #edf0f1;
+    display: flex;
+    align-items: center;
+}
+
+.nav-wrapper a:hover{
+    color: rgb(237, 240, 241, 0.7);
+}
