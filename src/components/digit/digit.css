@@ -1,0 +1,41 @@
+.digit{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5vh;
+}
+
+.digit-tools{
+    display: flex;
+    margin: auto;
+    /* justify-content: flex-end; */
+    align-items: baseline;
+}
+
+.digit-button{
+    border: none;
+    height: 5vh;
+    min-width: 5vh;
+    background-color: rgba(61, 157, 202, 0.918);
+    color: #edf0f1;
+    border-radius: 0.7vh;
+    margin: 0.5vw;
+    border: 1px solid rgba(61, 157, 202, 0.918);
+    border-bottom: 1vh solid rgb(61, 146, 202);
+}
+
+.digit-button:hover{
+    background-color: white;
+    color: rgba(61, 157, 202, 0.918);
+    border-top: 1vh solid rgb(250, 250, 250);
+    border: 1px solid rgba(61, 157, 202, 0.918);
+    cursor: pointer;
+}
+
+.digit-canvasContainer{
+    width: 100%;
+    margin-top: 2vh;
+}
+.digit-canvas{
+    border: 1px solid black;
+}
