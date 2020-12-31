@@ -42,15 +42,25 @@ function Digit() {
         }
 
         // ---
-        canvas.pointerdown = (e)=>{
+        let touch
+        canvas.ontouchstart = (e)=>{
             mouseDown = true
+            touch = e.touches[0]
+
+            pos = {x:touch.clientX-canvas.getBoundingClientRect().left, y:touch.clientY-canvas.getBoundingClientRect().top}
         }
-        canvas.pointerup = (e)=>{
+        canvas.ontouchend = (e)=>{
             mouseDown = false
         }
-        canvas.pointermove = (e)=>{
+        canvas.ontouchmove = (e)=>{
+
             ctx.moveTo(pos.x, pos.y)
-            let newPos = {x:e.clientX-canvas.getBoundingClientRect().left, y:e.clientY-canvas.getBoundingClientRect().top}
+            let newPos
+            touch = e.touches[0]
+            // setGuess(touch.clientX)
+            if(touch){
+                newPos = {x:touch.clientX-canvas.getBoundingClientRect().left, y:touch.clientY-canvas.getBoundingClientRect().top}
+            }
             if (mouseDown){
                 ctx.lineTo(newPos.x, newPos.y)
             }
